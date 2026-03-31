@@ -13,17 +13,17 @@ function App() {
   const [ganaste, setGanaste] = useState(false); 
 
   useEffect(() => {
-    axios.get("https://restcountries.com/v2/all?fields=name,translations,flags")
-      .then((res) => {
-        const paisesTraducidos = res.data.map((pais) => ({
-          nombre: pais.translations.es || pais.name,
-          bandera: pais.flags.png,
+    
+    axios.get("https://restcountries.com/v3.1/all?fields=name,translations,flags")
+    .then((res) => {
+        const paisesTraducidos = res.data.map((pais) => ({           
+            nombre: pais.translations.spa?.common || pais.name.common,
+            bandera: pais.flags.png,
         }));
         setBanderas(paisesTraducidos);
-      })
-      .catch((err) => console.error(err));
-  }, []);
-
+    })
+    .catch((err) => console.error(err));
+}, []);
   const inicializarJuego = () => {
     if (banderas.length === 0) return;
 
