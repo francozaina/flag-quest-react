@@ -80,7 +80,7 @@ function App() {
     return (
       <div className="App">
         <h1>Bienvenido al Juego de Banderas de Franco Zaina</h1>
-        <h2>¡Hace 10 puntos para ganar!</h2>
+        <h1>Adivinar = +5 segundos y 1 punto, errar = -5 segundos, ¡Hace 10 puntos para ganar!</h1>
         <button onClick={empezarJuego}>Empezar Juego</button>
       </div>
     );
