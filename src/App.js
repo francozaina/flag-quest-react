@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 
+
+function App() {
+  
   if (!juegoIniciado && !mostrarReglas && !ganaste && !juegoTerminado) {
     return (
       <div className="App">
@@ -73,5 +76,7 @@ import { useEffect, useState } from "react";
     </div>
   );
 
+
+}
 
 export default App;
