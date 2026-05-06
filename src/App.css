@@ -3,21 +3,24 @@
 }
 
 html,
-body,
-#root {
+body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  min-height: 100vh;
   font-family: 'Roboto', sans-serif;
 }
 
 body {
   background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  /* Quitamos el flex y el padding de aquí para evitar el scroll */
+}
+
+#root {
+  /* Pasamos el flexbox al contenedor principal de React */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  min-height: 100vh;
+  padding: 20px; 
 }
 
 .App {
